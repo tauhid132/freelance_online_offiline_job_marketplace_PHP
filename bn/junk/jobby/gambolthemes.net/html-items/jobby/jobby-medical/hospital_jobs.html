@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from gambolthemes.net/html-items/jobby/jobby-medical/hospital_jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Mar 2022 15:41:38 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, shrink-to-fit=9">
+<meta name="description" content="Gambolthemes">
+<meta name="author" content="Gambolthemes">
+<title>Jobby Medical - Hospital Dashboard</title>
+
+<link rel="icon" type="image/png" href="images/fav.png">
+
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/datepicker.min.css" rel="stylesheet">
+<link href="css/jquery.range.css" rel="stylesheet">
+<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
+<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="vendor/semantic/semantic.min.css">
+
+<script src='../../../../api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+<link href='../../../../api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div class="modal srch-model fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog modal-xl" role="document">
+<div class="modal-content">
+<div class="modal-header sheader">
+<button type="button" class="close srch-close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+<input type="text" class="srch-input" placeholder="Search Keywords...">
+</div>
+</div>
+</div>
+</div>
+
+
+<header>
+<div class="top-header">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<div class="top-header-full">
+<div class="top-left-hd">
+<ul>
+<li><div class="wlcm-text">Welcome to Jobby</div></li>
+<li>
+<div class="lang-icon dropdown">
+<i class="fas fa-globe ln-glb"></i>
+<a href="#" class="icon15 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+EN <i class="fas fa-caret-down p-crt"></i>
+</a>
+<div class="dropdown-menu lanuage-dropdown dropdown-menu-left">
+<a class="link-item" href="#">EN</a>
+<a class="link-item" href="#">DE</a>
+<a class="link-item" href="#">RU</a>
+<a class="link-item" href="#">ES</a>
+<a class="link-item" href="#">FR</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="top-right-hd">
+<ul>
+<li class="dropdown">
+<a href="#" class="icon14 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+<i class="fas fa-envelope"></i><div class="circle-alrt"></div>
+</a>
+<div class="dropdown-menu message-dropdown dropdown-menu-right">
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#"><img src="images/user-dp-1.jpg" alt="">
+<div class="user-title1">Jassica William </div>
+<span>Hey How are you John Doe...</span>
+</a>
+</div>
+<div class="time5">2 min ago</div>
+</div>
+</div>
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#"><img src="images/user-dp-1.jpg" alt="">
+ <div class="user-title1">Rock Smith </div>
+<span>Interesting Job! I will join this...</span>
+</a>
+</div>
+<div class="time5">5 min ago</div>
+</div>
+</div>
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#"><img src="images/user-dp-1.jpg" alt="">
+<div class="user-title1">Joy Doe </div>
+<span>Hey Sir! What about you...</span>
+</a>
+</div>
+<div class="time5">10 min ago</div>
+</div>
+</div>
+<div class="user-request-list">
+<a href="hospital_messages.html" class="view-all">View All Messages</a>
+</div>
+</div>
+</li>
+<li class="dropdown">
+<a href="#" class="icon14 dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+<i class="fas fa-bell"></i><div class="circle-alrt"></div>
+</a>
+<div class="dropdown-menu message-dropdown dropdown-menu-right">
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#">
+<div class="noti-icon"><i class="fas fa-users"></i></div>
+<div class="user-title1">Rock William </div>
+<span>applied for a <ins class="noti-p-link">Job Name</ins>.</span>
+</a>
+</div>
+</div>
+</div>
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#">
+<div class="noti-icon"><i class="fas fa-bullseye"></i></div>
+<div class="user-title1">Johnson Smith</div>
+<span>Booked a Appointment <ins class="noti-p-link">ID 122254</ins></span>
+</a>
+</div>
+</div>
+</div>
+<div class="user-request-list">
+<div class="request-users">
+<div class="user-request-dt">
+<a href="#">
+<div class="noti-icon"><i class="fas fa-exclamation"></i></div>
+<span class="pt-2">Your job listing <ins class="noti-p-link">Dentist Doctor</ins> is expiring.</span>
+</a>
+</div>
+</div>
+</div>
+<div class="user-request-list">
+<a href="hospital_notifications.html" class="view-all">View All Notifications</a>
+</div>
+</div>
+</li>
+<li>
+<div class="account order-1 dropdown">
+<a href="#" class="account-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+<div class="user-dp"><img src="images/dp.jpg" alt=""></div>
+<span>Hi! Apollo</span>
+<i class="fas fa-sort-down"></i>
+</a>
+<div class="dropdown-menu account-dropdown dropdown-menu-right">
+<a class="link-item" href="hospital_dashboard.html">Dashboard</a>
+<a class="link-item" href="hospital_setting.html">Setting</a>
+<a class="link-item" href="hospital_messages.html">My Messages</a>
+<a class="link-item" href="hospital_jobs.html">My Jobs</a>
+<a class="link-item" href="hospital_appointments.html">My Appointments</a>
+<a class="link-item" href="hospital_bookmarks.html">My Bookmarks</a>
+<a class="link-item" href="hospital_payments.html">Payments</a>
+<a class="link-item" href="sign_in.html">Logout</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sub-header">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark1 justify-content-sm-start">
+<a class="order-1 order-lg-0 ml-lg-0 ml-3 mr-auto" href="index.html"><img src="images/logo.svg" alt=""></a>
+<button class="navbar-toggler align-self-start" type="button">
+<i class="fas fa-bars"></i>
+</button>
+<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
+<ul class="navbar-nav align-self-stretch">
+<li class="nav-item active">
+<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Find Jobs</a>
+<div class="dropdown-menu pages-dropdown">
+<a class="link-item" href="browse_jobs.html">Browse Jobs</a>
+<a class="link-item" href="job_single_view.html">Single Job View</a>
+<a class="link-item" href="post_a_job.html">Post a Job</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Find Profiles</a>
+<div class="dropdown-menu pages-dropdown">
+<a class="link-item" href="browse_profiles.html">Browse Profiles</a>
+<a class="link-item" href="other_doctor_profile.html">Doctor Profile</a>
+<a class="link-item" href="other_patient_profile.html">Patient Profile</a>
+</div>
+</li>
+<li class="nav-item dropdown">
+<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">Find Hospitals</a>
+<div class="dropdown-menu pages-dropdown">
+<a class="link-item" href="browse_hospitals.html">Browse Hospitals</a>
+<a class="link-item" href="other_hospital_profile.html">Hospital Profile</a>
+</div>
+</li>
+<li class="nav-item dropdown pages152">
+<a href="#" class="nav-link dropdown-toggle-no-caret" role="button" data-toggle="dropdown">
+Pages <i class="fas fa-caret-down p-crt"></i>
+</a>
+<div class="dropdown-menu pages-dropdown">
+<a class="link-item" href="about.html">About</a>
+<a class="link-item" href="our_blog.html">Our Blog</a>
+<a class="link-item" href="blog_single_view.html">Signle Blog View</a>
+<a class="link-item" href="pricing_plans.html">Pricing Plans</a>
+<a class="link-item" href="checkout.html">Checkout</a>
+<a class="link-item" href="plan_invoice.html">Invoice Slip</a>
+<a class="link-item" href="transaction_invoice.html">Invoice Transaction</a>
+<a class="link-item" href="sign_in.html">Sign in</a>
+<a class="link-item" href="sign_up.html">Sign up</a> 
+<a class="link-item" href="sign_up_select_profile.html">Sign up Select Profiles</a>
+<a class="link-item" href="sign_up_doctor_profile.html">Create Doctor Profile</a>
+<a class="link-item" href="sign_up_hospital_profile.html">Create Hospital Profile</a>
+<a class="link-item" href="sign_up_user_profile.html">Create User Profile</a>
+<a class="link-item" href="contact_us.html">Contact</a>
+<a class="link-item" href="help_center.html">Help Center</a>
+</div>
+</li>
+</ul>
+<a href="#" class="search-link" role="button" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></a>
+<a href="post_a_job.html" class="add-post">Post a Job</a>
+</div>
+<div class="responsive-search order-1">
+<input type="text" class="rsp-search" placeholder="Search...">
+<i class="fas fa-search r-sh1"></i>
+</div>
+</nav>
+<div class="overlay"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<div class="title-bar">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<ol class="title-bar-text">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">My Account</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+
+
+<main class="browse-section">
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-4">
+<div class="account_dt_left">
+<div class="job-center-dt">
+<img src="images/homepage/candidates/img-11.jpg" alt="">
+<div class="job-urs-dts">
+<div class="dp_upload">
+<input type="file" id="file">
+<label for="file">Upload Photo</label>
+</div>
+<h4>Apollo Hospital</h4>
+<span>Hospital</span>
+<div class="exp145 text-center mt-2">
+Since : <span>1985</span>
+</div>
+</div>
+</div>
+<div class="my_websites">
+<ul>
+<li><a href="#" class="web_link"><i class="fas fa-globe"></i>www.companysite.com</a></li>
+<li><a href="#" class="web_link"><i class="far fa-edit"></i>www.blogsite.com</a></li>
+</ul>
+</div>
+<div class="group_skills_bar">
+<h6>Profile Completeness</h6>
+<div class="group_bar1">
+<span>85%</span>
+<div class="progress skill_process">
+<div class="progress-bar progress_bar_skills" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+<a href="#" class="skiils_button">Complete Required Skills</a>
+</div>
+<div class="rlt_section">
+<div class="rtl_left">
+<h6>Rating</h6>
+</div>
+<div class="rtl_right">
+<div class="star">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<span>4.9</span>
+</div>
+</div>
+</div>
+<div class="rlt_section">
+<div class="rtl_left">
+<h6>Location</h6>
+</div>
+<div class="rtl_right">
+<span><i class="fas fa-map-marker-alt lc_icon"></i> Ludhiana, India</span>
+</div>
+<div class="my_location">
+<div id="map"></div>
+</div>
+<ul class="rlt_section2">
+<li>
+<div class="rtl_left2">
+<h6>Email</h6>
+</div>
+<div class="rtl_right2">
+<span><a href="https://gambolthemes.net/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fdbc8d92919192bd98859c908d9198d39e9290">[email&#160;protected]</a></span>
+</div>
+</li>
+<li>
+<div class="rtl_left2">
+<h6>Phone</h6>
+</div>
+<div class="rtl_right2">
+<span>+911234567890</span>
+</div>
+</li>
+<li>
+<div class="rtl_left2">
+<h6>Fax</h6>
+</div>
+<div class="rtl_right2">
+<span>01612561496</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="social_section3 mb80">
+<div class="social_leftt3">
+<h6>Contact Social Account</h6>
+</div>
+<div class="social_right3">
+<a href="#"><i class="far fa-edit"></i></a>
+</div>
+<ul class="social_accounts">
+<li><a href="#" class="social_links"><i class="fab fa-facebook-f f1"></i>http://facebook.com/johndoe</a></li>
+<li><a href="#" class="social_links"><i class="fab fa-twitter t1"></i>http://twitter.com/johndoe</a></li>
+<li><a href="#" class="social_links"><i class="fab fa-linkedin-in l1"></i>http://linkedin.com/johndoe</a></li>
+<li><a href="#" class="social_links"><i class="fab fa-dribbble d1"></i>http://dribbble.com/johndoe</a></li>
+<li><a href="#" class="social_links"><i class="fab fa-behance b1"></i>http://behance.net/johndoe</a></li>
+<li><a href="#" class="social_links"><i class="fab fa-github g1"></i>http://github.com/johndoe</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-9 col-md-8 mainpage">
+<div class="account_heading">
+<div class="account_hd_left">
+<h2>Manage Your Account</h2>
+</div>
+<div class="account_hd_right">
+<a href="#" class="main_lg_btn">Logout</a>
+</div>
+</div>
+<div class="account_tabs">
+<ul class="nav nav-tabs">
+<li class="nav-item">
+<a class="nav-link" href="hospital_dashboard.html">Dashboard</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_profile.html">Profile</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_doctors.html">Doctors</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_notifications.html">Notifications</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_messages.html">Messages</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_appointments.html">Appointments</a>
+</li>
+<li class="nav-item">
+<a class="nav-link active" href="hospital_jobs.html">Jobs</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_gallery.html">Gallery</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_reviews.html">Reviews</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="hospital_payments.html">Payment</a>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle-no-caret" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-angle-down"></i></a>
+<div class="dropdown-menu dash-dropdown dropdown-menu-right">
+<a class="link-item" href="hospital_bookmarks.html">Bookmarks</a>
+<a class="link-item" href="hospital_setting.html">Setting</a>
+</div>
+</li>
+</ul>
+</div>
+<div class="jobs_manage">
+<div class="row">
+<div class="col-lg-3">
+<div class="jobs_tabs">
+<ul class="nav job_nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" href="#manage_jobs" id="manage-job-tab" data-toggle="tab">Manage Jobs</a>
+</li>
+<li class="nav-item job_nav_item">
+<a class="nav-link" href="#applied_candidates" id="applied-candidate-tab" data-toggle="tab">Applied Candidates</a>
+</li>
+<li class="nav-item job_nav_item">
+<a class="nav-link" href="#post_job" id="post-job-tab" data-toggle="tab">Post a Job</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="col-lg-9">
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="manage_jobs" role="tabpanel">
+<div class="view_chart">
+<div class="view_chart_header">
+<h4>Manage Jobs</h4>
+</div>
+<div class="job_bid_body">
+<ul class="all_applied_jobs jobs_bookmarks">
+<li>
+<div class="applied_item">
+<a href="#">Dermatologists Required</a>
+<span class="badge_alrt">Pending Approval</span>
+<ul class="view_dt_job">
+<li><div class="vw1254"><i class="far fa-clock"></i>Posted on 3 August 2018</div></li>
+<li><div class="vw1254"><i class="far fa-clock"></i>Expiring on 3 September 2018</div></li>
+</ul>
+<div class="btn_link23">
+<button class="apled_btn60"><span class="badge badge-light">0</span>APPLIED CANDIDATES</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+<li>
+<div class="applied_item">
+<a href="#">Urgent Opening for Jr Doctor</a>
+<span class="badge_alrt">Approved</span>
+<ul class="view_dt_job">
+<li><div class="vw1254"><i class="far fa-clock"></i>Posted on 29 July 2018</div></li>
+<li><div class="vw1254"><i class="far fa-clock"></i>Expiring on 29 August 2018</div></li>
+</ul>
+<div class="btn_link23">
+<button class="apled_btn60"><span class="badge badge-light">3</span>APPLIED CANDIDATES</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+<li>
+<div class="applied_item">
+<a href="#">Unit Finance Controller</a>
+<span class="badge_alrt">Expiring</span>
+<ul class="view_dt_job">
+<li><div class="vw1254"><i class="far fa-clock"></i>Posted on 24 July 2018</div></li>
+<li><div class="vw1254"><i class="far fa-clock"></i>Posted on 24 August 2018</div></li>
+</ul>
+<div class="btn_link23">
+<button class="apled_btn60"><span class="badge badge-light">4</span>APPLIED CANDIDATES</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+<li>
+<div class="applied_item">
+<a href="#">Radiologist (MD/ DNB/ DMRD) required</a>
+<span class="badge_alrt">Expiried</span>
+<ul class="view_dt_job">
+<li><div class="vw1254"><i class="far fa-clock"></i>Posted on 26 July 2018</div></li>
+</ul>
+<div class="btn_link23">
+<button class="apled_btn60"><span class="badge badge-light">8</span>APPLIED CANDIDATES</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="applied_candidates">
+<div class="view_chart">
+<div class="view_chart_header">
+<h4>Applied Candidates</h4>
+</div>
+<div class="job_bid_body">
+<ul class="all_applied_jobs jobs_bookmarks">
+<li>
+<div class="applied_candidates_item">
+<div class="applied_candidates_dt">
+<div class="candi_img">
+<img src="images/homepage/candidates/img-1.jpg" alt="">
+</div>
+<div class="candi_dt">
+<a href="#">John Doe</a>
+<div class="candi_cate">UX Designer</div>
+<div class="appoint452">
+<span><i class="fas fa-map-marker-alt lc_icon"></i> India</span>
+</div>
+</div>
+</div>
+<div class="btn_link24">
+<button class="apled_btn50">Download CV</button>
+<button class="apled_btn70">Message</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+<li>
+<div class="applied_candidates_item">
+<div class="applied_candidates_dt">
+<div class="candi_img">
+<img src="images/homepage/candidates/img-2.jpg" alt="">
+</div>
+<div class="candi_dt">
+<a href="#">Rock William</a>
+<div class="candi_cate">Front End Developer</div>
+<div class="appoint452">
+<span><i class="fas fa-map-marker-alt lc_icon"></i> India</span>
+</div>
+</div>
+</div>
+<div class="btn_link24">
+<button class="apled_btn50">Download CV</button>
+<button class="apled_btn70">Message</button>
+<a href="#" class="delete_icon1"><i class="far fa-trash-alt"></i></a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="post_job" role="tabpanel">
+<div class="view_chart">
+<div class="view_chart_header">
+<h4>Post a Job</h4>
+</div>
+<div class="post_job_body">
+<form>
+<div class="row">
+<div class="col-lg-12">
+<div class="form-group">
+<label class="label15">Job Name*</label>
+<input type="text" class="job-input" placeholder="Job Name Here">
+</div>
+<div class="form-group">
+<label class="label15">Job Description*</label>
+<textarea class="textarea_input" placeholder="Type Description"></textarea>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="requires">
+What are the job requirements
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Job Type*</label>
+<div class="ui fluid search selection dropdown skills-search">
+<input name="tags" type="hidden" value="">
+<i class="dropdown icon"></i>
+<input class="search" autocomplete="off" tabindex="0">
+<span class="sizer" style=""></span>
+<div class="default text">Select a job Type</div>
+<div class="menu transition hidden" tabindex="-1">
+<div class="item selected" data-value="Job1">Doctors</div>
+<div class="item" data-value="Job2">Nurses</div>
+<div class="item" data-value="Job3">Dentists</div>
+<div class="item" data-value="Job4">Technicians</div>
+<div class="item" data-value="Job5">Pharmacy</div>
+<div class="item" data-value="Job6">Optician</div>
+<div class="item" data-value="Job7">Allopathy </div>
+<div class="item" data-value="Job8">Homeopathy</div>
+<div class="item" data-value="Job9">Pharmaceutical</div>
+<div class="item" data-value="Job10">Medical Officer</div>
+<div class="item" data-value="Job11">Hospitals</div>
+<div class="item" data-value="Job12">Dietian &amp; Nutritionst</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Qualification**</label>
+<div class="ui fluid search selection dropdown skills-search">
+<input name="tags" type="hidden" value="">
+<i class="dropdown icon"></i>
+<input class="search" autocomplete="off" tabindex="0">
+<span class="sizer" style=""></span>
+<div class="default text">Select Qualification*</div>
+<div class="menu transition hidden" tabindex="-1">
+<div class="item" data-value="d1">Mscit</div>
+<div class="item" data-value="d2">Bscit</div>
+<div class="item" data-value="d3">BBA</div>
+<div class="item" data-value="d4">MBA</div>
+<div class="item" data-value="d5">BA</div>
+<div class="item" data-value="d6">MA</div>
+<div class="item" data-value="d7">Btech</div>
+<div class="item" data-value="d8">Mtech</div>
+<div class="item" data-value="d9">MBBS</div>
+<div class="item" data-value="d10">MD</div>
+<div class="item" data-value="d11">Bsc Nursing</div>
+<div class="item" data-value="d12">Msc Nursing</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Availability*</label>
+<div class="ui fluid search selection dropdown skills-search">
+<input name="tags" type="hidden" value="">
+<i class="dropdown icon"></i>
+<input class="search" autocomplete="off" tabindex="0">
+<span class="sizer" style=""></span>
+<div class="default text">I’m not sure</div>
+<div class="menu transition hidden" tabindex="-1">
+<div class="item selected" data-value="Availability1">Full Time</div>
+<div class="item selected" data-value="Availability2">Part Time</div>
+<div class="item selected" data-value="Availability3">Not Available</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Experience Level*</label>
+<div class="ui fluid search selection dropdown skills-search">
+<input name="tags" type="hidden" value="">
+<i class="dropdown icon"></i>
+<input class="search" autocomplete="off" tabindex="0">
+<span class="sizer" style=""></span>
+<div class="default text">Select Experience</div>
+<div class="menu transition hidden" tabindex="-1">
+<div class="item" data-value="level1">Intermediate (0 year - 2 year)</div>
+<div class="item" data-value="level2">Intermediate (2 year - 4 year)</div>
+<div class="item" data-value="level3">Intermediate (4 year - 6 year)</div>
+<div class="item" data-value="level4">Intermediate (6 year - 8 year)</div>
+<div class="item" data-value="level5">Intermediate (8 year - 10 year)</div>
+<div class="item" data-value="level6">Intermediate (10 year - 12 year)</div>
+<div class="item" data-value="level7">Intermediate (12 year - 14 year)</div>
+<div class="item" data-value="level8">Intermediate (14 year - 16 year)</div>
+<div class="item" data-value="level9">Intermediate (16 year - 20 year)</div>
+<div class="item" data-value="level10">Intermediate (20 year - 30 year)</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Salary*</label>
+<div class="smm_input">
+<input type="text" class="job-input" placeholder="$0.00">
+<div class="mix_max">Usd</div>
+</div>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="form-group">
+<label class="label15">Location*</label>
+<div class="smm_input">
+<input type="text" class="job-input" placeholder="Type Address">
+<div class="loc_icon"><i class="fas fa-map-marker-alt"></i></div>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<label class="label15">Languages*</label>
+<div class="ui fluid search selection dropdown skills-search">
+<input name="tags" type="hidden" value="">
+<i class="dropdown icon"></i>
+<input class="search" autocomplete="off" tabindex="0">
+<span class="sizer" style=""></span>
+<div class="default text">Select Language</div>
+<div class="menu transition hidden" tabindex="-1">
+<div class="item" data-value="lang1">English</div>
+<div class="item" data-value="lang2">Hindi</div>
+<div class="item" data-value="lang3">Punjabi</div>
+<div class="item" data-value="lang4">Bengali</div>
+<div class="item" data-value="lang5">Portuguese</div>
+<div class="item" data-value="lang6">Russian</div>
+<div class="item" data-value="lang7">Japanese</div>
+<div class="item" data-value="lang8">Telugu</div>
+<div class="item" data-value="lang9">French</div>
+<div class="item" data-value="lang10">German</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="form-group">
+<label class="label15">Upload Files*</label>
+<div class="image-upload-wrap1">
+<input class="file-upload-input1" id="file2" type="file" onchange="readURL(this);" accept="image/*">
+<div class="drag-text1">
+Upload Files
+ </div>
+</div>
+<p class="upload_dt">Images, Pdf and MS Word Filess</p>
+</div>
+</div>
+<div class="col-lg-12">
+<button class="post_jp_btn" type="submit">Post a Job</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+<footer class="footer">
+<div class="subscribe-newsletter">
+<div class="container">
+<div class="row justify-content-between">
+<div class="col-lg-6 col-md-6">
+<div class="subcribes">
+<div class="text-step1">
+<h4>Subscribe to Newsletter</h4>
+<div class="btext-heading mt-2" style="color:#acacac; font-size:14px;">
+<i class="fas fa-check-circle"></i>Cras nunc mauris, rhoncus eu justo at, egestas sagittis felis. Ut sed feugiat eros.
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-5 col-md-6">
+<div class="subcribe-input">
+<input class="nltr-input" type="email" placeholder="Your Email Address">
+<button class="s-btn">Subscribe</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3">
+<div class="about-jobby">
+<a href="index.html"><img src="images/logo1.svg" alt=""></a>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus et diam blandit vehicula sit amet sed metus. Fusce condimentum non neque at fringilla. Aenean malesuada aliquet tincidunt.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="footer-links">
+<h4>Quick Browse</h4>
+<ul>
+<li><a href="browse_jobs.html">Doctor Jobs</a></li>
+<li><a href="browse_jobs.html">Nurse Jobs</a></li>
+<li><a href="browse_jobs.html">Dentists Jobs</a></li>
+<li><a href="browse_jobs.html">Technician Jobs</a></li>
+<li><a href="browse_jobs.html">Pharmacy Jobs</a></li>
+<li><a href="browse_jobs.html">Pharmaceytical Jobs</a></li>
+<li><a href="browse_jobs.html">Optician Jobs</a></li>
+<li><a href="browse_jobs.html">Allopathy Jobs</a></li>
+<li><a href="browse_jobs.html">Homeopathy Jobs</a></li>
+<li><a href="browse_jobs.html">Hospital Jobs</a></li>
+<li><a href="browse_jobs.html">Medical Officer Jobs</a></li>
+<li><a href="browse_jobs.html">Medical Representative Jobs</a></li>
+<li><a href="browse_jobs.html">Dietian / Nutritionist Jobs</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="footer-links">
+<h4>Information</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="our_blog.html">Health News</a></li>
+<li><a href="post_a_job.html">Post a Job</a></li>
+<li><a href="help_center.html">Help &amp; FAQ’s</a></li>
+<li><a href="contact_us.html">Contact Us</a></li>
+<li><a href="pricing_plans.html">Pricing Plans</a></li>
+<li><a href="privacy_policy.html">Privacy Policy</a></li>
+<li><a href="terms.html">Terms and Services</a></li>
+<li><a href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-3">
+<div class="footer-links">
+<h4>Job Seekers</h4>
+<ul>
+<li><a href="browse_jobs.html">Search Jobs</a></li>
+<li><a href="#">View by Categories</a></li>
+<li><a href="browse_profiles.html">Find Profiles</a></li>
+<li><a href="browse_hospitals.html">Find Hospitals</a></li>
+<li><a href="sign_in.html">Login Now</a></li>
+<li><a href="sign_up.html">Register Now</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="copy-social">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 col-md-6">
+<div class="copyright">
+<i class="far fa-copyright"></i>Copyright 2019 <span>Jobby</span> by <a href="https://themeforest.net/user/gambolthemes/portfolio">Gambolthemes</a>. All Right Reserved.
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="social-icons">
+<ul>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+
+<button onclick="topFunction()" id="pageup" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery.min.js"></script>
+<script src="js/datepicker.min.js"></script>
+<script src="js/i18n/datepicker.en.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="vendor/OwlCarousel/owl.carousel.js"></script>
+<script src="vendor/semantic/semantic.min.js"></script>
+<script src="js/jquery.range-min.js"></script>
+<script src="js/custom1.js"></script>
+
+<script src='../../../../unpkg.com/es6-promise%404.2.4/dist/es6-promise.auto.min.js'></script>
+<script src="../../../../unpkg.com/%40mapbox/mapbox-sdk%400.13.3/umd/mapbox-sdk.min.js"></script>
+<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FtYm9sIiwiYSI6ImNqdm03bzYydDE2cW00YWwyeHprd3FqamcifQ.HBy4R4sRcXgbgn2OteqFkQ';
+			var mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+			mapboxClient.geocoding.forwardGeocode({
+			query: 'Ludhiana, India',
+			autocomplete: false,
+			limit: 1
+			})
+			.send()
+			.then(function (response) {
+			if (response && response.body && response.body.features && response.body.features.length) {
+			var feature = response.body.features[0];
+		 
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/mapbox/streets-v11',
+			center: [75.8429,30.9042],
+			zoom: 10
+			});				
+  
+			new mapboxgl.Marker()
+			.setLngLat(feature.center)
+			.addTo(map);
+			}
+			
+			// Add zoom and rotation controls to the map.
+			map.addControl(new mapboxgl.NavigationControl());
+			});						
+		</script>
+<script>
+			window.oncontextmenu = function () {
+				return false;
+			}
+			$(document).keydown(function (event) {
+				if (event.keyCode == 123) {
+					return false;
+				}
+				else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+					return false;
+				}
+			});
+		</script>
+</body>
+
+<!-- Mirrored from gambolthemes.net/html-items/jobby/jobby-medical/hospital_jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 16 Mar 2022 15:41:39 GMT -->
+</html>

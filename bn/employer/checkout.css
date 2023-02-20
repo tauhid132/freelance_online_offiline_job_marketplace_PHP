@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+@font-face {
+    font-family: 'Muli';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./../fonts/muli/muli-v11-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Muli Light'), local('Muli-Light'),
+    url('./../fonts/muli/muli-v11-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('./../fonts/muli/muli-v11-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+    url('./../fonts/muli/muli-v11-latin-300.woff') format('woff'), /* Modern Browsers */
+    url('./../fonts/muli/muli-v11-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('./../fonts/muli/muli-v11-latin-300.svg#Muli') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'fontello';
+    src: url('./../fonts/pasword_bullet/fontello.eot?10593450');
+    src: url('./../fonts/pasword_bullet/fontello.eot?10593450#iefix') format('embedded-opentype'),
+    url('./../fonts/pasword_bullet/fontello.woff?10593450') format('woff'),
+    url('./../fonts/pasword_bullet/fontello.ttf?10593450') format('truetype'),
+    url('./../fonts/pasword_bullet/fontello.svg?10593450#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.form-signin input[type="password"] {
+    font-family: 'fontello', 'Roboto', sans-serif !important;
+    letter-spacing: 5px !important;
+}
+
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        height: 100%;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.3s;
+    -moz-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-delay: 0.0s;
+    -moz-animation-delay: 0.0s;
+    animation-delay: 0.0s;
+}
+
+/*body {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 0px;
+}*/
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding: 0px;
+        height: 100%;
+    }
+}
+
+.disabledButton {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+#container-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.60;
+    filter: alpha(opacity=60);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* ----------- 0 - 320px ----------- */
+.form-signin {
+    width: 100%;
+    min-width: 320px;
+    padding: 5px 0px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    z-index: 10000;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formBody {
+    margin-bottom: 0px;
+}
+
+hr.itemDivider {
+    border: 3px solid #e44b6f;
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+div.itemAlignDiv {
+    display: flex;
+    width: 230px;
+    flex-direction: column;
+    padding-left: 5px;
+    align-items: flex-start;
+}
+
+#merchantLogo {
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    border-radius: 100px;
+    margin-top: 2px;
+    margin-right: 2px;
+    box-shadow: 0px 0px 1px 1px rgba(191, 181, 181, 1);
+}
+
+div.buttonAction {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen
+and (min-width: 311px)
+and (max-width: 320px) {
+    .form-signin {
+        width: 310px;
+    }
+}
+
+@media screen
+and (min-width: 311px)
+and (max-width: 360px) {
+    #merchantLogo {
+        width: 23px;
+        height: 23px;
+    }
+}
+
+@media screen
+and (min-width: 361px)
+and (max-width: 380px) {
+    #merchantLogo {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen
+and (min-width: 311px)
+and (max-width: 360px) {
+    .merchantAmount {
+        font-size: 15px;
+    }
+
+}
+
+@media screen
+and (min-width: 361px) {
+    .merchantAmount {
+        font-size: 20px;
+    }
+}
+
+@media screen
+and (min-width: 311px)
+and (max-width: 360px) {
+    #merchantAmountVal {
+        font-size: 15px;
+    }
+}
+
+@media screen
+and (min-width: 361px) {
+    #merchantAmountVal {
+        font-size: 20px;
+    }
+}
+
+@media screen
+and (min-width: 311px)
+and (max-width: 360px) {
+    .infoNameInvoice {
+        width: 200px;
+    }
+}
+
+@media screen
+and (min-width: 361px) {
+    .infoNameInvoice {
+        width: 223px;
+    }
+}
+
+
+@media screen
+and (min-width: 321px)
+and (max-width: 330px) {
+    .form-signin {
+        width: 320px;
+    }
+}
+
+@media screen
+and (min-width: 331px)
+and (max-width: 340px) {
+    .form-signin {
+        width: 330px;
+    }
+}
+
+@media screen
+and (min-width: 341px)
+and (max-width: 350px) {
+    .form-signin {
+        width: 340px;
+    }
+}
+
+@media screen
+and (min-width: 351px)
+and (max-width: 360px) {
+    .form-signin {
+        width: 350px;
+    }
+}
+
+@media screen
+and (min-width: 361px)
+and (max-width: 370px) {
+    .form-signin {
+        width: 360px;
+    }
+}
+
+@media screen
+and (min-width: 371px)
+and (max-width: 380px) {
+    .form-signin {
+        width: 370px;
+    }
+}
+
+@media only screen and (min-width: 381px) {
+    .form-signin {
+        width: 380px;
+    }
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    margin-top: 15px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 50;
+}
+
+.form-signin input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"] {
+    text-align: center;
+    border-radius: 0px;
+    width: 80%;
+}
+
+.form-signin input[type="tel"], input[type="number"] {
+    color: #3c3c3c;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.form-signin input::-webkit-outer-spin-button,
+.form-signin input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+.form-signin input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::placeholder {
+    color: #9a9a9a;
+    font-size: 14px;
+    -webkit-text-stroke-width: 0.02em;
+    letter-spacing: 0.04em;
+}
+
+.form-signin input[type="password"], input[type="text"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    color: #3c3c3c;
+}
+
+.formText {
+    padding: 0 10px 0 10px;
+}
+
+div.infoNameInvoice {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1px;
+}
+
+div.infoInvoice {
+    display: flex;
+    flex-direction: row;
+}
+
+#merchantName {
+    color: #464646;
+    font-size: 12px;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+
+span.invoiceText {
+    font-size: 13px;
+    color: #9a9a9a;
+    font-family: 'Roboto', sans-serif;
+}
+
+span.merchantAmount {
+    color: #464646;
+    font-family: 'Roboto', sans-serif;
+}
+
+#merchantAmountVal {
+    color: #464646;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2px
+}
+
+span.merchantInvoiceText {
+    color: #9a9a9a;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#merchantInvoice2 {
+    color: #9a9a9a;
+    font-size: 13px;
+    overflow: hidden;
+    width: 185px;
+    margin-left: 45px;
+    text-overflow: ellipsis;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    text-align: start;
+}
+
+#merchantInvoice1 {
+    color: #9a9a9a;
+    font-size: 13px;
+    margin-left: 3px;
+    width: 50px;
+    font-family: 'Roboto', sans-serif;
+    white-space: nowrap;
+    text-align: start;
+}
+
+span.merchantInvoiceVal {
+    color: #9a9a9a;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2px;
+}
+
+b.infoText {
+    color: #FFFFFF;
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+}
+
+span.infoText {
+    color: #FFFFFF;
+    font-size: 11.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+span.errorText {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+
+b.infoTextHead {
+    color: #FFFFFF;
+    font-size: 20px;
+    margin-left: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+b.textButton {
+    cursor: pointer;
+}
+
+#amount_to_be_paid {
+    font-family: 'Roboto', sans-serif;
+}
+
+#submit_button, #no_button {
+    outline: none;
+    width: 50%;
+    color: #414042;
+    border-right: 1px solid #BCBCBC;
+    border-left: 0px solid #000000;
+    border-top: 0px solid #000000;
+    border-bottom: 0px solid #000000;
+    background-color: #d1d3d4;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-radius: 0px;
+}
+
+#loader_div {
+    display: flex;
+    justify-content: center;
+    background-color: #d1d3d4;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#loader_image {
+    width: 100px;
+    height: 40px;
+    background-image: url("./../img/processing_gif.svg");
+
+}
+
+#resend_otp, #close_button, #yes_button {
+    outline: none;
+    width: 50%;
+    color: #FFFFFF;
+    background-color: #d1d3d4;
+    border-right: 1px solid #BCBCBC;
+    border-left: 0px solid #000000;
+    border-top: 0px solid #000000;
+    border-bottom: 0px solid #000000;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    border-radius: 0px;
+}
+
+#submit_button > img, #resend_otp > img, #close_button > img {
+    vertical-align: middle;
+}
+
+@-moz-document url-prefix() {
+    #trxInfo {
+        padding-bottom: 10px;
+    }
+    span.infoText {
+    }
+}
+
+#trxLoader {
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 24px;
+    opacity: 1;
+    animation-name: fadeInRight;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+
+.loadingText {
+    color: #464646;
+    font-size: 14px;
+    font-style: italic;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+}
+
+#trxInfoOnlyPin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 17px;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+}
+
+#trxInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 17px;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(+150px);
+    }
+    60% {
+        opacity: .6;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+#trxInfoTotal {
+    display: flex;
+    flex-direction: column;
+
+}
+
+div.trxMerchantInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+div.trxMerchantAmount {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1px;
+}
+
+div.dialerItem {
+    display: flex;
+    width: 23px;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    background-color: #e2136e;
+    border-radius: 50px;
+
+
+}
+
+#verticalCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+#inputHolder {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../img/input_bg.png');
+    width: 100%;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    background-color: #c94161;
+}
+
+#errorHolder {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../img/input_bg.png');
+    width: 100%;
+    height: 270px;
+    align-items: center;
+    justify-content: center;
+    background-color: #c94161;
+}
+
+#cancelTextHolder {
+    display: flex;
+    flex-direction: column;
+    background-image: url('./../img/input_bg.png');
+    width: 100%;
+    height: 170px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#logo {
+    min-width: 300px;
+    margin-top: 12px;
+    max-height: 80px;
+    background-image: url('./../img/bkash_payment.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#logoHolder {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    background-color: #fff;
+    width: 100%;
+    padding: 0;
+}
+
+#credit {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+#footerItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+#dialer {
+    background-image: url("./../img/phone.png");
+    width: 10px;
+    height: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#dialText {
+    color: #c94161;
+    margin-left: 10px;
+}
+
+#error {
+    color: #fff;
+    font-weight: bold;
+    font-size: 11.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #551A8B;
+}
